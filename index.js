@@ -205,6 +205,7 @@ async function fetchMovies() {
 
           // StarWars Fanodm Page of size 453996 creating call stack error. Word: 'Paragon', 'Arrant'
           // 'chauvinism' -> MCU -> 860619
+          // 'fervid' -> Star Wars -> 385253
           // Sometimes about 1 out of 5, the Stack Error does not comes.
           //    JS is very moody. It does not throw stack error whenever it wants.
           // A workaround is to just ignore it.
@@ -216,6 +217,9 @@ async function fetchMovies() {
             lowCaseData = '';
           }
           if (lowCaseData.length == 860619) {
+            lowCaseData = '';
+          }
+          if (lowCaseData.length == 385253) {
             lowCaseData = '';
           }
 
