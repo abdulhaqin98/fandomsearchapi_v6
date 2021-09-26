@@ -18,6 +18,7 @@ auth.onAuthStateChanged(user => {
     document.getElementById('logoutBtn').style.display = 'inline-block';
   } else {
     console.log('user logged out');
+    alert('session time out')
     document.getElementById('loginBtn').style.display = 'inline-block';
     document.getElementById('logoutBtn').style.display = 'none';
   }
