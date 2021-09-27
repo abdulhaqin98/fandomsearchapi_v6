@@ -98,6 +98,8 @@ var countMerge = 0
 var color = 1; //btnClass.js
 var wordBadge = 'white';
 
+var terminate = 0;
+
 async function fetchMovies() {
 
   const key = document.getElementById('querykey').value;
@@ -333,6 +335,10 @@ async function fetchMovies() {
     html = '';
     title = '';
     link = '';
+
+    if(terminate == 1){
+      break;
+    }
 
   } // end of for loop
 
@@ -816,4 +822,8 @@ async function updateWordSynonym(e) {
   document.getElementById(getWord).value = udSynonym;
   // Line 528 Div . Does not change in view but updates
   // document.getElementsByName(getWord).innerHTML = udSynonym;
+}
+
+function terminateSearch() {
+  terminate = 1;
 }
