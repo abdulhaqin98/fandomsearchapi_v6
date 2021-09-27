@@ -336,6 +336,8 @@ async function fetchMovies() {
     title = '';
     link = '';
 
+    // Terminate search, 'X' button.
+
     if(terminate == 1){
       break;
     }
